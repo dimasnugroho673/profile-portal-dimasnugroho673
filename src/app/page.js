@@ -1,55 +1,54 @@
+import CardProfileItem from "@/components/card-profile-item";
+import ButtonActionProfileItem from "@/components/button-action-profile-item";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start py-10 lg:mx-72 mx-6">
+        <div className="flex ...">
+          <div className="hidden sm:inline w-60 flex-none ...">
+            <img src="https://avatars.githubusercontent.com/u/46320757?v=4" className="avatar-modern-rounded w-44" />
+          </div>
+          <div className="flex-1 mb-3">
+            <div className="">
+              <div className="flex justify-center mb-7 sm:hidden">
+              <img src="https://avatars.githubusercontent.com/u/46320757?v=4" className=" avatar-modern-rounded w-44" />
+              </div>
+             
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              <div className="lg:text-5xl text-3xl font-bold mb-4">Dimas Nugroho Putro</div>
+              <div className="dark:text-gray-400 text-gray-600 mb-4">Seorang <strong>Web dan iOS Developer</strong> Enthusiast lulusan Sarjana Teknik Informatika Universitas Maritim Raja Ali Haji. Memiliki Pengalaman sebagai iOS Developer di Apple Developer Academy @Infinite Learning Batam dan Web Developer di Dinas Komunikasi dan Informatika Kabupaten Bintan selama 2 tahun. Memiliki pengalaman menggunakan PHP, MySQL, Codeigniter, Laravel, Javascript, REST API, dan Swift. Memiliki pengetahuan arsitektur seperti Repository Patterns, MVC, dan MVVM serta tertarik pada segala hal yang berhubungan dengan teknologi dan App Development.</div>
+              <div>
+
+                <div className="grid md:grid-cols-3 sm:grid-cols-1 mt-5 bg-red-700">
+                  <div>
+                    <ButtonActionProfileItem title={"Github"} externalLink={'https://github.com/dimasnugroho673'} icon={<i className="bi bi-github me-1"></i>} />
+                  </div>
+                  <div>
+                    <ButtonActionProfileItem title={"LinkedIn"} externalLink={'https://linkedin.com/in/dimasnp/'} icon={<i className="bi bi-linkedin me-1"></i>} />
+                  </div>
+                  <div>
+                    <ButtonActionProfileItem title={"Email"} externalLink={'mailto:dimasnugroho673@gmail.com'} icon={<i className="bi bi-envelope-fill me-1"></i>} />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="grid grid-flow-col grid-cols-3 gap-4">
+          <CardProfileItem title={"Experience"} subtitle={"All the experiences I've been through"} />
+
+          <CardProfileItem title={"Projects"} subtitle={"All completed project"} />
+
+          <CardProfileItem title={"Skills"} subtitle={"All the skills i have"} externalLink={"s"} />
+
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -95,7 +94,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }

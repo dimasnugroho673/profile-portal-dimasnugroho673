@@ -19,3 +19,27 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*--------------------------------------------------------------
+  # Bootstrap icon bold
+  --------------------------------------------------------------*/
+
+.force-bi-bold-05 {
+  -webkit-text-stroke-width: .5px;
+}
+
+.force-bi-bold-1 {
+  -webkit-text-stroke-width: 1px;
+}
+
+.force-bi-bold-1-5 {
+  -webkit-text-stroke-width: 1.5px;
+}
+
+.force-bi-bold-2 {
+  -webkit-text-stroke-width: 2px;
+}
+
+.avatar-modern-rounded {
+  border-radius: 65px;
+}
