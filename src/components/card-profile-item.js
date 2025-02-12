@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function CardProfileItem({ title, subtitle, link, externalLink }) {
     return (
         <div className="p-4 rounded-2xl border border-gray-800 dark:bg-gray-800 bg-white hover:shadow-md hover:cursor-pointer">
