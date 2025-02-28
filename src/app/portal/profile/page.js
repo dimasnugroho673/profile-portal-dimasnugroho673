@@ -11,12 +11,26 @@ export default function ProfilePage() {
         <div className="flex">
 
           <div className="hidden sm:inline w-60 flex-none">
-            <img src="https://avatars.githubusercontent.com/u/46320757?v=4" className="avatar-modern-rounded w-44" />
+            <Image
+              aria-hidden
+              src="/img-profile.jpg"
+              alt="Window icon"
+              width={120}
+              height={120}
+              className="avatar-modern-rounded w-44"
+            />
           </div>
 
           <div className="mb-3">
             <div className="flex justify-center mb-7 sm:hidden">
-              <img src="https://avatars.githubusercontent.com/u/46320757?v=4" className=" avatar-modern-rounded w-44" />
+              <Image
+              aria-hidden
+              src="/img-profile.jpg"
+              alt="Window icon"
+              width={120}
+              height={120}
+              className="avatar-modern-rounded w-44"
+            />
             </div>
 
             <div className="lg:text-5xl text-3xl font-bold mb-4">Dimas Nugroho Putro</div>

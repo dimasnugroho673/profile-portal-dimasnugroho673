@@ -9,9 +9,70 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #111827;
     --foreground: #ededed;
   }
+}
+
+/* @font-face {
+  font-family: 'Adwaita';
+  src: url('/fonts/Adwaita/AdwaitaSans-Italic.ttf') format('truetype'),
+       url('/fonts/Adwaita/AdwaitaSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    /* margin-top: 0;
+    margin-bottom: 0.5em; */
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  h5 {
+    font-size: 0.83em;
+    line-height: 1.6;
+  }
+
+  h6 {
+    font-size: 0.75em;
+    line-height: 1.7;
+  }
+}
+
+pre:has(> code) {
+	background: #f1f1f1;
+	padding: 1em;
+	border-radius: 0.33em;
+  color: black;
+  margin: 1em 0 1em 0;
+  border: 0.1px rgba(97, 97, 97, 0.1) solid;
+  font-size: 0.91em;
+  overflow-x: auto;
+}
+
+.img-cover-article {
+  border: 0.1px rgba(97, 97, 97, 0.1) solid;
 }
 
 body {

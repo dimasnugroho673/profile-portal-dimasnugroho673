@@ -8,10 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: '#8C6CF9',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: []
 };

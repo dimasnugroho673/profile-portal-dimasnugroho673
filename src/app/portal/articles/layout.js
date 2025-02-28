@@ -24,13 +24,13 @@ export const metadata = {
 };
 
 export default function ProfileLayout({ children }) {
-    return (
-        <html lang="en">
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
 
-            {/* <nav className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        {/* <nav className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
               <div className="container">
                 <div className="flex items-center justify-between relative">
                   <div className="px-4 left-0">
@@ -53,8 +53,8 @@ export default function ProfileLayout({ children }) {
                 </div>
               </div>
             </nav> */}
-    
-            {/* <nav className="flex justify-center h-[100px] ">
+
+        {/* <nav className="flex justify-center h-[100px] ">
               <div className="w-[1240px] flex items-center justify-between">
                 <div className="flex items-center w-[577px] justify-between">
                   <Image
@@ -66,23 +66,14 @@ export default function ProfileLayout({ children }) {
                     className=""
                   />
                   <div className="flex w-[340px] justify-between">
-                    <p className="text-purple-700">Home</p>
-                    <p>Artikel</p>
-                    <p>Series</p>
+                    <p className="">Home</p>
+                    <p className="text-purple-700">Artikel</p>
                   </div>
-                </div>
-                <div className="w-[279px] flex justify-between">
-                  <button className="bg-purple-200 px-[36px] py-[10px] rounded-[47px]">
-                    <p className="text-purple-700">Sign in</p>
-                  </button>
-                  <button className="bg-purple-600 px-[36px] py-[10px] rounded-[47px]">
-                    <p className="text-white">Sign Up</p>
-                  </button>
                 </div>
               </div>
             </nav> */}
-    
-            {/* <nav className="flex justify-center h-[80px] bg-red-600">
+
+        {/* <nav className="flex justify-center h-[80px] bg-red-600">
               <div className="flex items-center">
                 <div className="flex items-center">
                 <Image
@@ -96,8 +87,10 @@ export default function ProfileLayout({ children }) {
                 
               </div>
             </nav> */}
-    
-    <nav class="bg-transparent border-gray-200 dark:bg-gray-900">
+
+
+
+        <nav class="bg-transparent border-gray-200 dark:bg-gray-900">
           <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto sm:px-40 sm:py-10 p-4">
             <Link href={'/portal/profile'}>
               <Image
@@ -118,18 +111,23 @@ export default function ProfileLayout({ children }) {
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                  <Link href={`/portal/profile`} className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 font-bold" aria-current="page">Home</Link>
+                  <Link href={`/portal/profile`} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</Link>
                 </li>
                 <li>
-                  <Link href={`/portal/articles`} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Artikel</Link>
+                  <Link href={`/portal/articles`} className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 font-bold" aria-current="page">Artikel</Link>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-    
-            {children}
-          </body>
-        </html>
-      );
+
+
+        {children}
+
+        <footer className="row-start-3 pb-10 flex gap-6 flex-wrap items-center justify-center">
+          <small className="font-medium dark:text-white text-gray-800">@{new Date().getFullYear()} Dimas Nugroho Putro, Build with Next JS and Tailwind</small>
+        </footer>
+      </body>
+    </html>
+  );
 }
