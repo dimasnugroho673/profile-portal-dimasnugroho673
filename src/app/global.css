@@ -86,19 +86,19 @@ body {
   --------------------------------------------------------------*/
 
 .force-bi-bold-05 {
-  -webkit-text-stroke-width: .5px;
+  -webkit-text-strokeWidth: .5px;
 }
 
 .force-bi-bold-1 {
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-strokeWidth: 1px;
 }
 
 .force-bi-bold-1-5 {
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-strokeWidth: 1.5px;
 }
 
 .force-bi-bold-2 {
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-strokeWidth: 2px;
 }
 
 .avatar-modern-rounded {

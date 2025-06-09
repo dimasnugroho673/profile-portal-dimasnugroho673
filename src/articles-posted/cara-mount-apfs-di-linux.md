@@ -6,7 +6,7 @@ draft: false
 archived: true
 tags: ['Ubuntu', 'LEMP', 'apache2', 'PHP', 'MySQL', 'Linux']
 category: 'Tutorial Linux'
-cover: 'https://buildwithangga.com/storage/assets/thumbnail_tips/BuildWithAngga-thumbnail-tips-AQWiA-belajar-mengenal-middleware-pada-framework-laravel-11-Belajar%20Mengenal%20Middleware%20Pada%20Framework%20Laravel%2011%20buildwithangga.png'
+cover: '/images-uploaded/cover/cara-mount-apfs-di-linux.png'
 ---
 
 # Selamat datang di Artikel Pertama

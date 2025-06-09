@@ -45,39 +45,35 @@ export default async function ArticleDetail({ params }) {
   }
 
   function getCategory() {
-    return `<a href="/portal/category/${data.category}" class="hover:text-primary">${data.category}</a>`
+    return <a href={`/portal/category/${data.category}`} className={"hover:text-primary"}>{data.category}</a>
   }
 
   function getTags() {
-    let tags = ``
-
-    data.tags.map(tag => {
-      tags += `<a href="/portal/tag/${tag}" class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 text-black dark:text-white hover:text-primary hover:cursor-pointer p-2 rounded-full text-xs px-3 me-2">#${tag}</a> `
+    return data.tags.map((tag, index) => {
+      return <a key={index} href={`/portal/tag/${tag}`} className={"bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 text-black dark:text-white hover:text-primary hover:cursor-pointer p-2 rounded-full text-xs px-3 me-2"}>#{tag}</a>
       // rounded-full bg-white text-slate border-slate border-gray-700 dark:bg-gray-700  hover:bg-slate-800 hover:text-white border text-base px-4 py-2
     })
-
-    return tags
   }
 
   if (data == {}) {
     return (<div>Artikel tidak ditemukan</div>)
-  } else {
-    return (
-      <div className='grid grid-cols-1 px-5 md:px-80 py-5'>
-        <div>
-
-          <Link href={`/portal/articles`} className='bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 text-black dark:text-white hover:text-primary hover:cursor-pointer p-2 rounded-full text-base px-3'><i class="bi bi-arrow-left me-1"></i> Kembali</Link>
-
-          <h1 className="font-bold text-4xl m-0 p-0 mt-8">{getTitle()}</h1>
-          <p className='mt-3'>{getDate() + ' • '} <span dangerouslySetInnerHTML={{ __html: getCategory() }} /></p>
-          <div className='mt-2' dangerouslySetInnerHTML={{ __html: getTags() }} />
-
-          <img src={data.cover} className="rounded-2xl mt-10 w-100 img-cover-article" />
-
-          <div className='mt-10' dangerouslySetInnerHTML={{ __html: data.content }} />
-        </div>
-      </div>
-    );
   }
+
+  return (
+    <div className='grid grid-cols-1 px-5 md:px-80 py-5'>
+      <div>
+
+        <Link href={`/portal/articles`} className='bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 text-black dark:text-white hover:text-primary hover:cursor-pointer p-2 rounded-full text-base px-3'><i className="bi bi-arrow-left me-1"></i> Kembali</Link>
+
+        <h1 className="font-bold text-4xl m-0 p-0 mt-8">{getTitle()}</h1>
+        <p className='mt-3'>{getDate() + ' • '} <span>{getCategory()}</span></p>
+        <div className='mt-3'>{getTags()}</div>
+
+        <img src={data.cover} className="rounded-2xl mt-10 w-100 img-cover-article" />
+
+        <div className='mt-10' dangerouslySetInnerHTML={{ __html: data.content }} />
+      </div>
+    </div>
+  );
 
 }
